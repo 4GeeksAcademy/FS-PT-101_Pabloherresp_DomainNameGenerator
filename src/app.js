@@ -20,12 +20,12 @@ window.onload = function() {
     let result = ""
 
     //condicional para "domain hacks"
-    if(k == "sides" && m == ".es"){
-      result = i+j+"sid"+m
-    } else if(k == "sitcom" && m == ".com"){
-      result = i+j+"sit"+m
-    } else if(k == "audio" && m == ".io"){
-      result = i+j+"aud"+m
+    if(k.endsWith("es") && m == ".es"){
+      result = i+j+ k.substring(0,k.length - 2) +m
+    } else if(k.endsWith("com") && m == ".com"){
+      result = i+j+ k.substring(0,k.length - 3) +m
+    } else if(k.endsWith("io") && m == ".io"){
+      result = i+j+ k.substring(0,k.length - 2) +m
     }
     else{
       result = i+j+k+m
